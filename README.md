@@ -5,14 +5,21 @@
 
 **LT-LBP (Logarithmic Transformation – Local Binary Pattern)** is a lightweight Python library for **texture analysis** and **feature extraction** from grayscale images.  
 
-It implements the LT-LBP formula:
-
-\[
+$$
 LT\text{-}LBP = \sum_{p=0}^{7} s(g_c - g_p) \cdot p
-\]
+$$
 
-where \(s(x) = 1\) if \(x > 0\), else 0.
+where the step function $s(x)$ is defined as:
 
+$$
+s(x) = 
+\begin{cases}
+1 & \text{if } x > 0 \\
+0 & \text{otherwise}
+\end{cases}
+$$
+
+Here, $g_c$ is the center pixel intensity and $g_p$ are its 8 neighbors (clockwise).
 This method is robust for **illuminated and low-light images**, making it ideal for applications in:
 
 - Face recognition  
