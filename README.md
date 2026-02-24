@@ -41,6 +41,7 @@ This method is robust for **illuminated and low-light images**, making it ideal 
 ## Installation
 
 pip install ltlbp
+from LTLBP import ltlbp
 
 ## License
 
